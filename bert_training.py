@@ -18,7 +18,6 @@ from io import StringIO
 logging.basicConfig(filename='bert_training.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-# Function to capture print output
 def capture_print(func):
     def wrapper(*args, **kwargs):
         old_stdout = sys.stdout
@@ -34,7 +33,6 @@ def capture_print(func):
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 logging.info(f"Using device: {device}")
 
-# Load and preprocess data
 df = pd.read_csv('/storage/research/data/nids/NSL-KDD/KDDTrain+.csv')
 logging.info(f"Dataset shape: {df.shape}")
 categorical_columns = ['protocol_type', 'service', 'flag']
@@ -52,13 +50,12 @@ num_classes = len(np.unique(y))
 logging.info(f"Number of classes: {num_classes}")
 logging.info(f"Unique labels after encoding: {np.unique(y)}")
 
-# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 scaler = StandardScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
-# Apply PCA
+# PCA
 pca = PCA(n_components=0.95)
 X_train_pca = pca.fit_transform(X_train_scaled)
 X_test_pca = pca.transform(X_test_scaled)
@@ -145,9 +142,6 @@ class DNN(nn.Module):
 
 @capture_print
 def train_improved_bert(model, train_loader, test_loader, epochs=50):
-    """
-    Train the Improved BERT model and return the history of loss and accuracy.
-    """
     model.to(device)
 
     criterion = nn.CrossEntropyLoss()
