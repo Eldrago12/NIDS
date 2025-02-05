@@ -1,0 +1,77 @@
+2024-11-15 23:38:05,161 - INFO - Using device: cuda
+2024-11-15 23:38:05,454 - INFO - Dataset shape: (125973, 42)
+2024-11-15 23:38:05,492 - INFO - Number of classes: 5
+2024-11-15 23:38:05,494 - INFO - Unique labels after encoding: [0 1 2 3 4]
+2024-11-15 23:38:05,827 - INFO - Original number of features: 41
+2024-11-15 23:38:05,827 - INFO - Number of features after PCA: 24
+2024-11-15 23:38:06,837 - INFO - Training Improved BERT
+2024-11-15 23:41:51,083 - INFO - Epoch 1/20, Loss: 0.1243, Accuracy: 98.2179%
+2024-11-15 23:45:26,051 - INFO - Epoch 2/20, Loss: 0.0586, Accuracy: 98.4679%
+2024-11-15 23:49:04,208 - INFO - Epoch 3/20, Loss: 0.0450, Accuracy: 98.8291%
+2024-11-15 23:52:40,832 - INFO - Epoch 4/20, Loss: 0.0384, Accuracy: 98.9204%
+2024-11-15 23:56:13,961 - INFO - Epoch 5/20, Loss: 0.0335, Accuracy: 99.1228%
+2024-11-15 23:59:46,057 - INFO - Epoch 6/20, Loss: 0.0307, Accuracy: 99.0832%
+2024-11-16 00:03:24,191 - INFO - Epoch 7/20, Loss: 0.0273, Accuracy: 99.0236%
+2024-11-16 00:07:04,182 - INFO - Epoch 8/20, Loss: 0.0255, Accuracy: 99.1625%
+2024-11-16 00:10:43,941 - INFO - Epoch 9/20, Loss: 0.0238, Accuracy: 98.9085%
+2024-11-16 00:14:23,376 - INFO - Epoch 10/20, Loss: 0.0211, Accuracy: 99.2816%
+2024-11-16 00:18:02,784 - INFO - Epoch 11/20, Loss: 0.0198, Accuracy: 99.3014%
+2024-11-16 00:21:40,757 - INFO - Epoch 12/20, Loss: 0.0171, Accuracy: 99.4443%
+2024-11-16 00:25:17,572 - INFO - Epoch 13/20, Loss: 0.0156, Accuracy: 99.3808%
+2024-11-16 00:28:52,854 - INFO - Epoch 14/20, Loss: 0.0145, Accuracy: 99.4166%
+2024-11-16 00:32:27,946 - INFO - Epoch 15/20, Loss: 0.0130, Accuracy: 99.4602%
+2024-11-16 00:36:04,978 - INFO - Epoch 16/20, Loss: 0.0119, Accuracy: 99.4999%
+2024-11-16 00:39:42,031 - INFO - Epoch 17/20, Loss: 0.0113, Accuracy: 99.4840%
+2024-11-16 00:43:18,783 - INFO - Epoch 18/20, Loss: 0.0105, Accuracy: 99.5317%
+2024-11-16 00:46:55,972 - INFO - Epoch 19/20, Loss: 0.0099, Accuracy: 99.5197%
+2024-11-16 00:50:33,213 - INFO - Epoch 20/20, Loss: 0.0094, Accuracy: 99.5317%
+2024-11-16 00:50:33,214 - INFO - 
+2024-11-16 00:50:42,544 - INFO - Training CNN-LSTM
+2024-11-16 00:51:03,062 - INFO - Epoch 1/20, Loss: 0.4276, Accuracy: 94.9434%
+2024-11-16 00:51:22,792 - INFO - Epoch 2/20, Loss: 0.1470, Accuracy: 96.2731%
+2024-11-16 00:51:41,867 - INFO - Epoch 3/20, Loss: 0.0952, Accuracy: 97.2772%
+2024-11-16 00:52:00,874 - INFO - Epoch 4/20, Loss: 0.0765, Accuracy: 97.8091%
+2024-11-16 00:52:19,836 - INFO - Epoch 5/20, Loss: 0.0693, Accuracy: 98.1822%
+2024-11-16 00:52:38,714 - INFO - Epoch 6/20, Loss: 0.0623, Accuracy: 98.2973%
+2024-11-16 00:52:57,710 - INFO - Epoch 7/20, Loss: 0.0583, Accuracy: 98.4005%
+2024-11-16 00:53:17,138 - INFO - Epoch 8/20, Loss: 0.0539, Accuracy: 98.5434%
+2024-11-16 00:53:36,061 - INFO - Epoch 9/20, Loss: 0.0517, Accuracy: 98.4164%
+2024-11-16 00:53:55,110 - INFO - Epoch 10/20, Loss: 0.0495, Accuracy: 98.2139%
+2024-11-16 00:54:14,354 - INFO - Epoch 11/20, Loss: 0.0474, Accuracy: 98.4044%
+2024-11-16 00:54:33,152 - INFO - Epoch 12/20, Loss: 0.0458, Accuracy: 98.4679%
+2024-11-16 00:54:52,578 - INFO - Epoch 13/20, Loss: 0.0451, Accuracy: 98.6743%
+2024-11-16 00:55:12,096 - INFO - Epoch 14/20, Loss: 0.0435, Accuracy: 98.7894%
+2024-11-16 00:55:31,604 - INFO - Epoch 15/20, Loss: 0.0421, Accuracy: 98.7696%
+2024-11-16 00:55:50,526 - INFO - Epoch 16/20, Loss: 0.0421, Accuracy: 98.7775%
+2024-11-16 00:56:09,280 - INFO - Epoch 17/20, Loss: 0.0411, Accuracy: 98.7458%
+2024-11-16 00:56:28,495 - INFO - Epoch 18/20, Loss: 0.0409, Accuracy: 98.7934%
+2024-11-16 00:56:47,729 - INFO - Epoch 19/20, Loss: 0.0404, Accuracy: 98.8093%
+2024-11-16 00:57:07,117 - INFO - Epoch 20/20, Loss: 0.0401, Accuracy: 98.8093%
+2024-11-16 00:57:07,118 - INFO - 
+2024-11-16 00:57:08,242 - INFO - Training DNN
+2024-11-16 00:57:19,618 - INFO - Epoch 1/20, Loss: 0.5214, Accuracy: 95.0625%
+2024-11-16 00:57:30,525 - INFO - Epoch 2/20, Loss: 0.1910, Accuracy: 96.0230%
+2024-11-16 00:57:41,138 - INFO - Epoch 3/20, Loss: 0.1590, Accuracy: 96.3921%
+2024-11-16 00:57:52,094 - INFO - Epoch 4/20, Loss: 0.1434, Accuracy: 96.6462%
+2024-11-16 00:58:03,026 - INFO - Epoch 5/20, Loss: 0.1311, Accuracy: 96.8565%
+2024-11-16 00:58:13,926 - INFO - Epoch 6/20, Loss: 0.1218, Accuracy: 96.9677%
+2024-11-16 00:58:24,915 - INFO - Epoch 7/20, Loss: 0.1167, Accuracy: 97.0867%
+2024-11-16 00:58:36,154 - INFO - Epoch 8/20, Loss: 0.1088, Accuracy: 97.1661%
+2024-11-16 00:58:47,383 - INFO - Epoch 9/20, Loss: 0.1043, Accuracy: 97.2256%
+2024-11-16 00:58:58,405 - INFO - Epoch 10/20, Loss: 0.0973, Accuracy: 97.3011%
+2024-11-16 00:59:09,476 - INFO - Epoch 11/20, Loss: 0.0949, Accuracy: 97.4082%
+2024-11-16 00:59:20,680 - INFO - Epoch 12/20, Loss: 0.0933, Accuracy: 97.5749%
+2024-11-16 00:59:31,937 - INFO - Epoch 13/20, Loss: 0.0922, Accuracy: 97.6305%
+2024-11-16 00:59:43,145 - INFO - Epoch 14/20, Loss: 0.0876, Accuracy: 97.6702%
+2024-11-16 00:59:54,353 - INFO - Epoch 15/20, Loss: 0.0908, Accuracy: 97.7297%
+2024-11-16 01:00:05,469 - INFO - Epoch 16/20, Loss: 0.0878, Accuracy: 97.7416%
+2024-11-16 01:00:16,621 - INFO - Epoch 17/20, Loss: 0.0882, Accuracy: 97.7456%
+2024-11-16 01:00:27,727 - INFO - Epoch 18/20, Loss: 0.0836, Accuracy: 97.7535%
+2024-11-16 01:00:38,850 - INFO - Epoch 19/20, Loss: 0.0871, Accuracy: 97.7535%
+2024-11-16 01:00:50,044 - INFO - Epoch 20/20, Loss: 0.0839, Accuracy: 97.7535%
+2024-11-16 01:00:50,044 - INFO - 
+2024-11-16 01:00:50,862 - INFO - Best model saved as 'Improved_BERT_16nov.pth' with accuracy: 99.5317
+2024-11-16 01:00:50,886 - WARNING - No handles with labels found to put in legend.
+2024-11-16 01:00:50,988 - INFO - Training progress plot saved.
+2024-11-16 01:00:52,571 - INFO - Best model 'Improved BERT' loaded successfully for SHAP analysis.
+2024-11-16 01:00:52,572 - ERROR - SHAP failed: No module named 'tensorflow'

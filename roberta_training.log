@@ -1,0 +1,101 @@
+2024-09-12 07:40:35,852 - INFO - Using device: cuda
+2024-09-12 07:40:36,423 - INFO - Dataset shape: (125973, 42)
+2024-09-12 07:40:36,498 - INFO - Number of classes: 5
+2024-09-12 07:40:36,503 - INFO - Unique labels after encoding: [0 1 2 3 4]
+2024-09-12 07:40:37,038 - INFO - Original number of features: 41
+2024-09-12 07:40:37,038 - INFO - Number of features after PCA: 24
+2024-09-12 07:40:38,199 - INFO - Lock 139893497801552 acquired on /root/.cache/huggingface/hub/.locks/models--bert-base-uncased/45a2321a7ecfdaaf60a6c1fd7f5463994cc8907d.lock
+2024-09-12 07:40:38,542 - INFO - Lock 139893497801552 released on /root/.cache/huggingface/hub/.locks/models--bert-base-uncased/45a2321a7ecfdaaf60a6c1fd7f5463994cc8907d.lock
+2024-09-12 07:40:38,857 - INFO - 
+Training Modified BERT model:
+2024-09-12 08:09:42,044 - INFO - Epoch 1/10, Accuracy: 53.27%
+Epoch 2/10, Accuracy: 53.27%
+Epoch 3/10, Accuracy: 53.27%
+Epoch 4/10, Accuracy: 53.27%
+Epoch 5/10, Accuracy: 53.27%
+Epoch 6/10, Accuracy: 53.27%
+Epoch 7/10, Accuracy: 53.27%
+Epoch 8/10, Accuracy: 53.27%
+Epoch 9/10, Accuracy: 53.27%
+Epoch 10/10, Accuracy: 53.27%
+
+2024-09-12 08:09:51,089 - INFO - 
+Modified BERT Results:
+2024-09-12 08:09:51,089 - INFO - Accuracy: 0.5327
+2024-09-12 08:09:51,089 - INFO - Classification Report:
+2024-09-12 08:09:51,089 - INFO -               precision    recall  f1-score   support
+
+           0       0.00      0.00      0.00      9181
+           1       0.00      0.00      0.00        11
+           2       0.00      0.00      0.00       224
+           3       0.00      0.00      0.00      2357
+           4       0.53      1.00      0.70     13422
+
+    accuracy                           0.53     25195
+   macro avg       0.11      0.20      0.14     25195
+weighted avg       0.28      0.53      0.37     25195
+
+2024-09-12 08:09:51,089 - INFO - 
+Training CNN-LSTM model:
+2024-09-12 08:15:31,376 - INFO - Epoch 1/10, Accuracy: 98.29%
+Epoch 2/10, Accuracy: 98.90%
+Epoch 3/10, Accuracy: 98.63%
+Epoch 4/10, Accuracy: 98.91%
+Epoch 5/10, Accuracy: 98.88%
+Epoch 6/10, Accuracy: 99.08%
+Epoch 7/10, Accuracy: 99.27%
+Epoch 8/10, Accuracy: 99.02%
+Epoch 9/10, Accuracy: 99.31%
+Epoch 10/10, Accuracy: 99.20%
+
+2024-09-12 08:15:33,560 - INFO - 
+CNN-LSTM Results:
+2024-09-12 08:15:33,561 - INFO - Accuracy: 0.9920
+2024-09-12 08:15:33,561 - INFO - Classification Report:
+2024-09-12 08:15:33,561 - INFO -               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      9181
+           1       0.50      0.09      0.15        11
+           2       0.97      0.69      0.81       224
+           3       0.97      0.99      0.98      2357
+           4       0.99      0.99      0.99     13422
+
+    accuracy                           0.99     25195
+   macro avg       0.89      0.75      0.79     25195
+weighted avg       0.99      0.99      0.99     25195
+
+2024-09-12 08:15:33,561 - INFO - 
+Training DNN model:
+2024-09-12 08:18:26,896 - INFO - Epoch 1/10, Accuracy: 98.56%
+Epoch 2/10, Accuracy: 98.74%
+Epoch 3/10, Accuracy: 98.83%
+Epoch 4/10, Accuracy: 98.85%
+Epoch 5/10, Accuracy: 98.94%
+Epoch 6/10, Accuracy: 98.91%
+Epoch 7/10, Accuracy: 99.00%
+Epoch 8/10, Accuracy: 98.94%
+Epoch 9/10, Accuracy: 98.96%
+Epoch 10/10, Accuracy: 99.03%
+
+2024-09-12 08:18:28,221 - INFO - 
+DNN Results:
+2024-09-12 08:18:28,222 - INFO - Accuracy: 0.9903
+2024-09-12 08:18:28,222 - INFO - Classification Report:
+2024-09-12 08:18:28,222 - INFO -               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00      9181
+           1       0.00      0.00      0.00        11
+           2       0.71      0.89      0.79       224
+           3       0.98      0.98      0.98      2357
+           4       0.99      0.99      0.99     13422
+
+    accuracy                           0.99     25195
+   macro avg       0.74      0.77      0.75     25195
+weighted avg       0.99      0.99      0.99     25195
+
+2024-09-12 08:18:28,475 - INFO - Model comparison plot saved as 'model_comparison.png'
+2024-09-12 08:18:28,475 - INFO - 
+Final Results:
+2024-09-12 08:18:28,475 - INFO - Modified BERT: 0.5327
+2024-09-12 08:18:28,476 - INFO - CNN-LSTM: 0.9920
+2024-09-12 08:18:28,476 - INFO - DNN: 0.9903
