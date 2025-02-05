@@ -10,32 +10,25 @@ from torch.utils.data import DataLoader, TensorDataset
 from transformers import RobertaModel, RobertaConfig
 import matplotlib.pyplot as plt
 
-# Load the NSL-KDD dataset
 df = pd.read_csv('/storage/research/data/nids/NSL-KDD/KDDTrain+.csv')
 
-# Basic preprocessing
 categorical_columns = ['protocol_type', 'service', 'flag']
 le = LabelEncoder()
 for col in categorical_columns:
     df[col] = le.fit_transform(df[col])
 
-# Split features and labels
 X = df.drop(columns=['xAttack'])
 y = df['xAttack']
 
-# Encode the target variable
 le_target = LabelEncoder()
 y = le_target.fit_transform(y)
 
-# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Normalize features
 scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_test = scaler.transform(X_test)
 
-# Convert to PyTorch tensors
 train_dataset = TensorDataset(torch.FloatTensor(X_train), torch.LongTensor(y_train))
 test_dataset = TensorDataset(torch.FloatTensor(X_test), torch.LongTensor(y_test))
 
@@ -48,7 +41,6 @@ num_classes = len(np.unique(y))
 print(f"Number of features: {num_features}")
 print(f"Number of classes: {num_classes}")
 
-# Modified RoBERTa model
 class ModifiedRobertaForNSLKDD(nn.Module):
     def __init__(self, num_features, num_classes):
         super().__init__()
@@ -69,7 +61,6 @@ class ModifiedRobertaForNSLKDD(nn.Module):
         pooled_output = outputs.last_hidden_state.mean(dim=1)
         return self.classifier(pooled_output)
 
-# CNN-LSTM model
 class CNNLSTM(nn.Module):
     def __init__(self, input_dim, hidden_dim, num_classes):
         super().__init__()
@@ -87,7 +78,6 @@ class CNNLSTM(nn.Module):
         _, (hidden, _) = self.lstm(x)
         return self.fc(hidden[-1])
 
-# DNN model
 class DNN(nn.Module):
     def __init__(self, input_dim, hidden_dims, num_classes):
         super().__init__()
@@ -106,9 +96,8 @@ class DNN(nn.Module):
     def forward(self, x):
         return self.model(x)
 
-# Training function
 def train_model(model, train_loader, test_loader, epochs=10):
-    device = torch.device('cpu')  # Use CPU instead of GPU
+    device = torch.device('cpu') 
     model.to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters())
@@ -136,7 +125,6 @@ def train_model(model, train_loader, test_loader, epochs=10):
 
         print(f'Epoch {epoch+1}/{epochs}, Accuracy: {100 * correct / total:.2f}%')
 
-# Initialize and train models
 roberta_model = ModifiedRobertaForNSLKDD(num_features, num_classes)
 cnn_lstm_model = CNNLSTM(num_features, hidden_dim=128, num_classes=num_classes)
 dnn_model = DNN(num_features, hidden_dims=[256, 128, 64], num_classes=num_classes)
@@ -174,7 +162,6 @@ for name, model in models:
 
     results[name] = accuracy
 
-# Plot results
 plt.figure(figsize=(10, 6))
 plt.bar(results.keys(), results.values())
 plt.title('Model Accuracy Comparison')
